@@ -7,6 +7,9 @@ window.addEventListener("load", function(){
     let shuttleHeight = document.getElementById("spaceShuttleHeight");
     let landButton = document.getElementById("landing");
     let abortButton = document.getElementById("missionAbort");
+    let rocketShip = document.getElementById("rocket");
+    let upButton = document.getElementById("up");
+    let downButton = document.getElementById("down");
 
     takeOffButton.addEventListener("click", function(){
         if(confirm("Confirm that the shuttle is ready for takeoff.") == true) {
@@ -30,6 +33,16 @@ window.addEventListener("load", function(){
             shuttleHeight.innerHTML = "0";
         }
     })
+
+    upButton.addEventListener("click", function(){
+        rocketShip.style.top += 100;
+    })
+
+    downButton.addEventListener("click", function(){
+        rocketShip.style.bottom += "100px";
+    })
+
+
 
 
 });
